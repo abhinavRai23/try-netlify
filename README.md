@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+### Deploying React Applications: Free Hosting Options
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project explores free deployment solutions for React applications.
 
-Currently, two official plugins are available:
+#### GitHub Pages
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Status:** Already in use
 
-## React Compiler
+#### Netlify
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **Dashboard:** [Netlify Project Overview](https://app.netlify.com/projects/abhinav-rai/overview)
+- **Website:** [https://abhinav-rai.netlify.app/](https://abhinav-rai.netlify.app/)
 
-## Expanding the ESLint configuration
+#### Cloudflare Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Dashboard:** [Cloudflare Pages Dashboard](https://dash.cloudflare.com/7b67bb9a943e69ad5749370381fa0e5a/pages/view/abhinav-rai)
+- **Website:** [https://try-netlify.pages.dev](https://try-netlify.pages.dev)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### Vercel
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **Dashboard:** [Vercel Dashboard](https://vercel.com/abhinavrai23s-projects/try-netlify-23)
+- **Website:** [https://try-netlify-23.vercel.app/](https://try-netlify-23.vercel.app/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### Render
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Dashboard:** [Render Dashboard](https://dashboard.render.com/project/prj-d3eomifdiees73avsuh0)
+- **Website:** [https://abhinav-rai.onrender.com/](https://abhinav-rai.onrender.com/)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Surge
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Just run `surge` to deploy the website.
+
+- **Website:** [https://abhinav-rai.surge.sh/](https://abhinav-rai.surge.sh/)
